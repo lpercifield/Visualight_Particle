@@ -120,12 +120,13 @@ void Visualight_Particle::processClient(){
 // heartbeat to server so it knows this light is still connected
 void Visualight_Particle::sendHeartbeat(){
   //VPRINTLN(F("-SENDHEARTBEAT-"));
-  wifly.print("{\"mac\":\"");
-  for (int i=0; i<6; i++) {
-    if (i) wifly.print(":");
-    wifly.print(MAC[i], HEX);
-  }
-  wifly.println("\",\"h\":\"h\"}");
+  wifly.println("{\"mac\":\"6C:0B:84:59:1B:4D\",\"h\":\"h\"}");
+  // wifly.print("{\"mac\":\"");
+  // for (int i=0; i<6; i++) {
+  //   if (i) wifly.print(":");
+  //   wifly.print(MAC[i], HEX);
+  // }
+  // wifly.println("\",\"h\":\"h\"}");
   lastHeartbeat = millis();
   //VPRINT(F("Free memory: "));
   //int freeMem = wifly.getFreeMemory();
