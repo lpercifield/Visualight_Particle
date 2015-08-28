@@ -4,7 +4,8 @@
 #include "application.h"
 #include "spark_wiring_string.h"
 #include "spark_wiring_tcpclient.h"
-//#include "spark_wiring_usbserial.h"
+#include "spark_wiring_wifi.h"
+#include "spark_wiring_usbserial.h"
 
 // telnet defaults to port 23
 //TCPServer server = TCPServer(5001);
