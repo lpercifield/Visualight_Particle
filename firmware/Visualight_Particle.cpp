@@ -32,6 +32,7 @@ boolean Visualight_Particle::connectToServer(){
       if (i) wifly.print(":");
       wifly.print(MAC[i], HEX);
       Serial.print(MAC[i], HEX);
+      Serial.print(MAC[i]);
     }
     //wifly.write(MAC);
     wifly.println("\"}");

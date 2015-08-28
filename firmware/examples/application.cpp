@@ -17,9 +17,10 @@ void setup()
   Serial.println(WiFi.subnetMask());
   Serial.println(WiFi.gatewayIP());
   Serial.println(WiFi.SSID());
+  visualight.setup("visualight.cloudapp.net", 5001, 1);
 }
 
 void loop()
 {
-  visualight.setup("visualight.cloudapp.net", 5001, 1);
+  visualight.update();
 }
