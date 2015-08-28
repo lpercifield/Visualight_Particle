@@ -1,0 +1,7 @@
+{
+    "name": "visualight",
+    "version": "0.0.1",
+    "author": "Leif Percifield <leif@visualight.org>",
+    "license": "CC BY-NC-SA",
+    "description": "Library for using spark as Visualight device - very much Alpha"
+}
