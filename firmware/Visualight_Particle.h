@@ -16,10 +16,10 @@
 /* whiteLED is digitalPin 5 on the PRODUCT Version.
 if you are converting a DIY bulb to RGBW, change this to digitalPin 6 */
  #define whiteLED 3 // DIY = 6 // PRODUCT = 5 //
-class Visualight {
+class Visualight_Particle {
 
 	public:
-		Visualight(void);
+		Visualight_Particle(void);
 		TCPClient wifly; //just in case we want to access this from the sketch...
 		void update();
 		void setup(char* _URL, uint16_t _PORT, uint8_t _wiflyLedFlag);
