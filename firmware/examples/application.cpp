@@ -1,6 +1,6 @@
 #include "application.h"
-#include "visualight_particle/Visualight.h"
-Visualight visualight;
+#include "Visualight_Particle/Visualight_Particle.h"
+Visualight_Particle visualight;
 
 
 
