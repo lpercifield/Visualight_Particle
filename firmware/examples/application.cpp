@@ -1,5 +1,5 @@
 #include "application.h"
-#include "visualight/visualight.h"
+#include "visualight_particle/Visualight.h"
 Visualight visualight;
 
 
