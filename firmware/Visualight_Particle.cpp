@@ -78,11 +78,12 @@ void Visualight_Particle::processClient(){
       connectTime = millis();
       char thisChar;
       thisChar = wifly.read();
-      //Serial.print(thisChar);
+      Serial.print(thisChar);
       if( thisChar == 'a'){
         int charCount = 0;
         thisChar = wifly.read();
-        if(thisChar!='x'&&charCount<31){
+        //if(thisChar!='x'&&charCount<31){
+        if(thisChar!='x'){
         serBuf[charCount] = thisChar;
         charCount++;
         }else{
