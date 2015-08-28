@@ -7,8 +7,10 @@ Visualight_Particle::Visualight_Particle(){
   alerting = false;
   alertBeginTimeStamp = 0;
   blinkState = 100;
-
   lastHeartbeat = 0;
+  pinMode(redLED, OUTPUT);
+  pinMode(greenLED, OUTPUT);
+  pinMode(blueLED, OUTPUT);
 
 }
 void Visualight_Particle::setup(char* _URL, uint16_t _PORT, uint8_t _wiflyLedFlag){
