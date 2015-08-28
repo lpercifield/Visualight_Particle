@@ -84,6 +84,7 @@ void Visualight_Particle::processClient(){
         charCount++;
         }else{
         //wifly.readBytesUntil('x', serBuf, 31);
+        Serial.println(serBuf);
         int duration;
         int red, green, blue, white;
         sscanf(serBuf,"%i,%i,%i,%i,%i,%i,%i",&red,&green,&blue,&white,&duration,&_frequency,&_blinkType); // INDIGO v0.1.1
