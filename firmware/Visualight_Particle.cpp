@@ -63,8 +63,8 @@ void Visualight_Particle::processClient(){
     sendHeartbeat();
   } else {
     available = wifly.available();
-    Serial.print("Available: ");
-    Serial.println(available);
+    //Serial.print("Available: ");
+    //Serial.println(available);
 
     // if (available < 0) {
     //   VPRINT(F("reconnect from available()"));
@@ -78,8 +78,8 @@ void Visualight_Particle::processClient(){
       connectTime = millis();
       char thisChar;
       thisChar = wifly.read();
-      Serial.print(thisChar);
-      if( thisChar == 97){
+      //Serial.print(thisChar);
+      if( thisChar == 'a'){
         int charCount = 0;
         thisChar = wifly.read();
         if(thisChar!='x'&&charCount<31){
