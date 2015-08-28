@@ -32,6 +32,7 @@ class Visualight_Particle {
 		void colorLED(int red, int green, int blue, int white);
 		void fadeOn();
 		void sendHeartbeat();
+    boolean connectToServer();
 		void alert();
 		void setAlert(int blinkType, long durationTime, int frequency, int r, int g, int b, int w);
 		boolean alerting;
@@ -41,7 +42,7 @@ class Visualight_Particle {
 		char * URL;
 		uint16_t PORT;
 		char serBuf[31];//21 for blink
-		char MAC[18];
+		byte MAC[6];
 
 		int _red;
 		int _green;

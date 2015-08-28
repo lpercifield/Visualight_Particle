@@ -28,7 +28,11 @@ boolean Visualight_Particle::connectToServer(){
     //VPRINTLN(F("Connected"));
 
     wifly.print("{\"mac\":\"");
-    wifly.print(MAC);
+    for (int i=0; i<6; i++) {
+      if (i) wifly.print(":");
+      wifly.print(MAC[i], HEX);
+    }
+    //wifly.write(MAC);
     wifly.println("\"}");
 
     //reconnect = false;
@@ -115,7 +119,10 @@ void Visualight_Particle::processClient(){
 void Visualight_Particle::sendHeartbeat(){
   //VPRINTLN(F("-SENDHEARTBEAT-"));
   wifly.print("{\"mac\":\"");
-  wifly.print(MAC);
+  for (int i=0; i<6; i++) {
+    if (i) wifly.print(":");
+    wifly.print(MAC[i], HEX);
+  }
   wifly.println("\",\"h\":\"h\"}");
   lastHeartbeat = millis();
   //VPRINT(F("Free memory: "));
