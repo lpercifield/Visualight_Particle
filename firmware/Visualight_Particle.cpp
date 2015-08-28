@@ -27,7 +27,7 @@ boolean Visualight_Particle::connectToServer(){
 
     //VPRINTLN(F("Connected"));
 
-    wifly.println("{\"mac\":\"6C:0B:84:59:1B:4D\"}");
+    wifly.print("{\"mac\":\"6C:0B:84:59:1B:4D\"}");
     // for (int i=0; i<6; i++) {
     //   if (i) wifly.print(":");
     //   wifly.print(MAC[i], HEX);
@@ -120,7 +120,7 @@ void Visualight_Particle::processClient(){
 // heartbeat to server so it knows this light is still connected
 void Visualight_Particle::sendHeartbeat(){
   //VPRINTLN(F("-SENDHEARTBEAT-"));
-  wifly.println("{\"mac\":\"6C:0B:84:59:1B:4D\",\"h\":\"h\"}");
+  wifly.print("{\"mac\":\"6C:0B:84:59:1B:4D\",\"h\":\"h\"}");
   // wifly.print("{\"mac\":\"");
   // for (int i=0; i<6; i++) {
   //   if (i) wifly.print(":");
