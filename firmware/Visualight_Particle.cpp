@@ -81,12 +81,12 @@ void Visualight_Particle::processClient(){
       Serial.print(thisChar);
       if( thisChar == 'a'){
         int charCount = 0;
-        thisChar = wifly.read();
         //if(thisChar!='x'&&charCount<31){
-        if(thisChar!='x'){
+        while(thisChar!='x'){
+        thisChar = wifly.read();
         serBuf[charCount] = thisChar;
         charCount++;
-        }else{
+        }
         //wifly.readBytesUntil('x', serBuf, 31);
         Serial.println(serBuf);
         int duration;
@@ -118,7 +118,7 @@ void Visualight_Particle::processClient(){
             setColor(red, green, blue, white);
         }
         memset(serBuf,0,31);
-        }
+        
       }
     }
   }
