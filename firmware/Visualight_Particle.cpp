@@ -27,15 +27,15 @@ boolean Visualight_Particle::connectToServer(){
 
     //VPRINTLN(F("Connected"));
 
-    wifly.print("{\"mac\":\"");
-    for (int i=0; i<6; i++) {
-      if (i) wifly.print(":");
-      wifly.print(MAC[i], HEX);
-      Serial.print(MAC[i], HEX);
-      Serial.print(MAC[i]);
-    }
+    wifly.println("{\"mac\":\"6C:0B:84:59:1B:4D\"}");
+    // for (int i=0; i<6; i++) {
+    //   if (i) wifly.print(":");
+    //   wifly.print(MAC[i], HEX);
+    //   Serial.print(MAC[i], HEX);
+    //   Serial.print(MAC[i]);
+    // }
     //wifly.write(MAC);
-    wifly.println("\"}");
+    //wifly.println("\"}");
 
     //reconnect = false;
     connectTime = millis();
